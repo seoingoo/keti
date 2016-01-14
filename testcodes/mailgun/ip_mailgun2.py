@@ -1,5 +1,10 @@
 import smtplib
 
+from email.MIMEBase import MIMEBase
+from email.MIMEMultipart import MIMEMultipart
+from email import Encoders
+from email import Utils
+from email.header import Header
 from email.mime.text import MIMEText
 
 import time, os
@@ -37,11 +42,19 @@ def stalk_chk():
 # print ip_chk(), mac_chk(), wip_chk(), wmac_chk(), stalk_chk()
 
 now = time.localtime()
+text = "ip : %s" % ip_chk() + "mac : %s" % mac_chk() + "wip : %s" % wip_chk() + "wmac : %s" % wmac_chk() + "stalk : %s" % stalk_chk() + "\n\n\n%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
 
-msg = MIMEText('ip : %s\nmac : %s\nwip : %s\nwmac : %s\nstalk : %s\n\n\n' % (ip_chk(), mac_chk(), wip_chk(), wmac_chk(), stalk_chk()) + '%04d/%02d/%02d %02d:%02d:%02d' % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec))
+msg = MIMEMultipart("alternative")
 msg['Subject'] = "Raspberry Pi IP Address Announcement!"
 msg['From'] = "raspberry@pi.com"
 msg['to'] = "disk012@ajou.ac.kr"
+msg.attach(MIMEText(text, "html", _charset="utf-8"))
+
+part = MIMEBase("application", "octet-stream")
+part.set_payload(open("test.txt", "rb").read())
+Encoders.encode_base64(part)
+part.add_header("Content-Disposition", "attachment", filename='%s' % os.path.basename("test.txt"))
+msg.attach(part)
 
 s = smtplib.SMTP('smtp.mailgun.org', 587)
 
