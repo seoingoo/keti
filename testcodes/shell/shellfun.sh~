@@ -1,0 +1,18 @@
+#! /bin/bash
+
+two_sum_fun()
+{
+    echo "first argu : $1"
+    echo "second argu : $2"
+    sum=`expr $1 + $2`
+
+    return $sum
+}
+
+echo "first argu : "
+input=
+
+two_sum_fun 2 3
+result=$?
+
+echo "sum = $result"

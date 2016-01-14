@@ -1,0 +1,37 @@
+import sys
+sys.path.append("./lib")
+from lcd import *
+
+def main():
+    lcd_init()
+
+#    lcd_string("disappear", LCD_LINE_1, 2)
+#    time.sleep(1)
+#    lcd_byte(0x01, LCD_CMD)
+#    lcd_string("appear", LCD_LINE_1, 2)
+#    time.sleep(1)
+#    lcd_string("0x01 test", LCD_LINE_1, 2)
+#    lcd_byte(0x01, LCD_CHR)
+#    time.sleep(1)
+    
+    lcd_string("testing 12345678", LCD_LINE_1, 1)
+    lcd_string("testing abcdefgh", LCD_LINE_2, 1)
+    time.sleep(5)
+    lcd_byte(0x02, LCD_CMD)
+    time.sleep(5)
+#    lcd_byte(0xC0, LCD_CMD)
+#    time.sleep(5)
+#    time.sleep(1)
+#    time.sleep(1)
+#    time.sleep(1)
+#    time.sleep(1)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        lcd_byte(0x01, LCD_CMD)
+        time.sleep(1)
+        GPIO.cleanup()
