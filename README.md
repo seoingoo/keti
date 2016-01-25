@@ -67,5 +67,14 @@
      손님이 녹음이 안끝났다면 다시 녹음을 재개하고 끝났다면 주인에게 영상과 녹음파일을 메일로 발송한다.
      
 
-
+4. 개인 비서
+  - 음성 명령으로 명령 실행
+        Light On/Off
+        Computer On/Off
+        IP Check
+        Whether Check
+        Comming
+        Work Off
+        New Mail Check
+        
 
