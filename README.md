@@ -68,13 +68,13 @@
      
 
 4. 개인 비서
-  - 음성 명령으로 명령 실행
-        Light On/Off
-        Computer On/Off
-        IP Check
-        Whether Check
-        Comming
-        Work Off
-        New Mail Check
+    음성 명령으로 명령 실행
+        - Light On/Off
+        - Computer On/Off
+        - IP Check
+        - Whether Check
+        - Comming
+        - Work Off
+        - New Mail Check
         
 
