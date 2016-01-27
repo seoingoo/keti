@@ -1,0 +1,2 @@
+shlibs:Depends=libc6 (>= 2.4), libc6 (>= 2.13-28), libpopt0 (>= 1.14), libttspico0 (>= 1.0)
+misc:Depends=

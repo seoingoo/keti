@@ -1,0 +1,18 @@
+Package: libttspico-dev
+Source: svox
+Version: 1.0+git20110131-2
+Architecture: armhf
+Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Installed-Size: 595
+Depends: libttspico0 (= 1.0+git20110131-2)
+Section: non-free/libdevel
+Priority: extra
+Homepage: http://www.android.com/
+Description: Small Footprint TTS (development files)
+ The SVOX Pico engine is a software speech synthesizer for German, English (GB
+ and US), Spanish, French and Italian.
+ .
+ SVOX produces a clear and distinct speech output made possible by the use of
+ Hidden Markov Model (HMM) algorithms.
+ .
+ This package contains the files required for development.

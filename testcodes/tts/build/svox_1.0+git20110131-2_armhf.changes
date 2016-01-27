@@ -1,0 +1,49 @@
+Format: 1.8
+Date: Fri, 08 Jun 2012 23:17:24 +0200
+Source: svox
+Binary: libttspico-dev libttspico-data libttspico0 libttspico-utils
+Architecture: source armhf all
+Version: 1.0+git20110131-2
+Distribution: unstable
+Urgency: low
+Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Changed-By: Samuel Thibault <sthibault@debian.org>
+Description: 
+ libttspico-data - Small Footprint TTS (lingware)
+ libttspico-dev - Small Footprint TTS (development files)
+ libttspico-utils - Small Footprint TTS (binaries)
+ libttspico0 - Small Footprint TTS (library)
+Changes: 
+ svox (1.0+git20110131-2) unstable; urgency=low
+ .
+   * control:
+     - Add myself as uploader.
+     - Depend on hardening-check.
+     - Bump Standards-Version to 3.9.3 (no changes).
+     - Set libttspico0 multi-arch: same.
+     - Set libttspico-data multi-arch: foreign.
+   * rules:
+     - Set DEB_BUILD_HARDENING=1 to enable hardening.
+     - Set multi-arch libdir.
+   * debian/libttspico0.install,libttspico-dev.install: Use multi-arch path.
+Checksums-Sha1: 
+ 197f3951ae629c15b9485dd1d1c53663d8c79727 1378 svox_1.0+git20110131-2.dsc
+ 9033c26b344bf16497f990238a42a7c358673125 12438 svox_1.0+git20110131-2.debian.tar.gz
+ bac1cc50be893bf0fb9d59fda8dcc48de1820bc8 214948 libttspico-dev_1.0+git20110131-2_armhf.deb
+ 069235a523c898effe83e16c2584838ae3aba560 4671008 libttspico-data_1.0+git20110131-2_all.deb
+ 35b567158603f644edfee2c9224a9d8e87887069 152940 libttspico0_1.0+git20110131-2_armhf.deb
+ a7a6578e007d0b2f8a0b85044246f5c8838920f9 8876 libttspico-utils_1.0+git20110131-2_armhf.deb
+Checksums-Sha256: 
+ 9c105dbc78daecffaa0da75bcec58b8c9c94e388df1b880271f960ccb62a55fb 1378 svox_1.0+git20110131-2.dsc
+ 99a1e41566362eecf47ef78134abbafca2c787357aa8fc103badc592d27134a6 12438 svox_1.0+git20110131-2.debian.tar.gz
+ 0a7dcd4cdcf3576b76c253bee4c913636cbdcf9d22721dbd7ba0cb30ccbdcc06 214948 libttspico-dev_1.0+git20110131-2_armhf.deb
+ 39cbf5ee6fff2dff50def5cd0ad112db8784348524edbd46363c2e2a82b27052 4671008 libttspico-data_1.0+git20110131-2_all.deb
+ 72316473452d72b7674ce9f3c3621b5eac467efc8cbdfa12cf2bff2ba35a3a96 152940 libttspico0_1.0+git20110131-2_armhf.deb
+ 12aaf9122c01b5e40152156fefd42fc396637fad12c19e6d4beb4ef50b62af03 8876 libttspico-utils_1.0+git20110131-2_armhf.deb
+Files: 
+ 1b353678e83a9c750b9f27d2526bbb9e 1378 non-free/sound extra svox_1.0+git20110131-2.dsc
+ 7124c8dbfe9456fcd237e4a92670e74c 12438 non-free/sound extra svox_1.0+git20110131-2.debian.tar.gz
+ 788b541e1e9c7e25d5e9e97df94ea583 214948 non-free/libdevel extra libttspico-dev_1.0+git20110131-2_armhf.deb
+ 3a9a8bb73392e251a1ba45fb85cfa70a 4671008 non-free/sound extra libttspico-data_1.0+git20110131-2_all.deb
+ 93a5d51085a57aae7cb060feb446e672 152940 non-free/sound extra libttspico0_1.0+git20110131-2_armhf.deb
+ bba937f0182fd26b70cec689fc62e54f 8876 non-free/sound extra libttspico-utils_1.0+git20110131-2_armhf.deb
