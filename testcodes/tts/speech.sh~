@@ -1,0 +1,9 @@
+#!/bin/bash
+
+say() {
+
+    local IFS=+;/usr/bin/mpalyer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?tl=en&q=$*";
+
+}
+
+say $*
